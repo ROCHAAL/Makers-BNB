@@ -1,0 +1,31 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/silverlongjohns/Makers/challenges/afternoon/Makers-BNB/spec/features/homepage_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/silverlongjohns/Makers/challenges/afternoon/Makers-BNB/spec/features/testing_infrastructure_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1597069545
+  }
+}

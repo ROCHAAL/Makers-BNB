@@ -1,10 +1,14 @@
 ENV['RACK_ENV'] = 'test'
-require File.join(File.dirname(__FILE__), '..', 'app.rb')
+
 require 'rspec'
 require 'capybara'
 require 'capybara/rspec'
 require 'simplecov'
 require 'simplecov-console'
+require './app.rb'
+
+require File.join(File.dirname(__FILE__), '..', 'app.rb')
+Capybara.app = AirBnb
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
