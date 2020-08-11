@@ -18,7 +18,7 @@ attr_reader :address, :description, :id
   def self.all
     result = DatabaseConnection.query("SELECT * FROM listings;")
     result.map do |listing|
-      Listing.new(id: listing['id'], address: listing['address'], description: ['description'])
+      Listing.new(id: listing['id'], address: listing['address'], description: listing['description'])
     end
   end
 end

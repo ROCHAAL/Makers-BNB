@@ -30,6 +30,7 @@ describe Listing do
       expect(Listing.all).to be_a Array
       expect(Listing.all.first).to be_a Listing
       expect(Listing.all.first.address).to eq 'alexs@numericable.fr'
+      expect(Listing.all.first.description).to eq 'Great big house!'
       expect(Listing.all.last.address).to eq 'test@test.com'
     end
   end
