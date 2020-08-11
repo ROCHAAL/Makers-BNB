@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/alexis/projects/makers/weeks/week_6/Makers-BNB/spec/database_connection_spec.rb": {
+      "/Users/student/Documents/Projects/MakersBnB/spec/database_connection_spec.rb": {
         "lines": [
           1,
           null,
@@ -25,7 +25,7 @@
           null
         ]
       },
-      "/home/alexis/projects/makers/weeks/week_6/Makers-BNB/spec/features/homepage_spec.rb": {
+      "/Users/student/Documents/Projects/MakersBnB/spec/features/homepage_spec.rb": {
         "lines": [
           1,
           1,
@@ -36,7 +36,7 @@
           null
         ]
       },
-      "/home/alexis/projects/makers/weeks/week_6/Makers-BNB/spec/features/testing_infrastructure_spec.rb": {
+      "/Users/student/Documents/Projects/MakersBnB/spec/features/testing_infrastructure_spec.rb": {
         "lines": [
           1,
           null,
@@ -49,7 +49,7 @@
           null
         ]
       },
-      "/home/alexis/projects/makers/weeks/week_6/Makers-BNB/spec/listing_spec.rb": {
+      "/Users/student/Documents/Projects/MakersBnB/spec/listing_spec.rb": {
         "lines": [
           1,
           null,
@@ -74,10 +74,22 @@
           1,
           null,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       },
-      "/home/alexis/projects/makers/weeks/week_6/Makers-BNB/lib/listing.rb": {
+      "/Users/student/Documents/Projects/MakersBnB/lib/listing.rb": {
         "lines": [
           1,
           null,
@@ -85,21 +97,27 @@
           1,
           null,
           1,
+          15,
+          15,
+          15,
+          null,
+          null,
+          1,
           3,
-          3,
+          null,
           3,
           null,
           null,
           1,
-          1,
-          null,
-          1,
+          5,
+          5,
+          10,
           null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1597119146
+    "timestamp": 1597152428
   }
 }

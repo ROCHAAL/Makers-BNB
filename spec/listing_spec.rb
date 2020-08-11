@@ -21,4 +21,16 @@ describe Listing do
       expect(DatabaseConnection.query("SELECT address FROM listings WHERE id=1;").first['address']).to eq('alexs@numericable.fr')
     end
   end
+
+  describe '.all' do 
+    it 'lists all listings from the database' do 
+      Listing.create(address: 'alexs@numericable.fr', description: 'Great big house!')
+      Listing.create(address: 'test@test.com', description: 'this is a test!')
+      expect(Listing.all.length).to eq 2
+      expect(Listing.all).to be_a Array
+      expect(Listing.all.first).to be_a Listing
+      expect(Listing.all.first.address).to eq 'alexs@numericable.fr'
+      expect(Listing.all.last.address).to eq 'test@test.com'
+    end
+  end
 end
