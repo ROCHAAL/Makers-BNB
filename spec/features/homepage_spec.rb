@@ -4,4 +4,10 @@ feature "The homepage" do
     click_button("Listings")
     expect(page).to have_content("house 1")
   end
+
+  scenario "has a button that directs the user to a create listings page" do
+    visit('/')
+    click_button("Add Listing")
+    expect(page).to have_content("New Listing:")
+  end
 end
