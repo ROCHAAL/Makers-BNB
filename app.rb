@@ -1,24 +1,30 @@
 require "sinatra/base"
+require "./lib/listing"
+require "./lib/database_connection"
+require "./database_setup"
 
 class AirBnb < Sinatra::Base
-  $listings = ["house 1", "house 2", "house 3"]
 
   get '/' do
     erb(:index)
+    # Homepage
   end
 
   get '/listings' do
+    @list = Listing.all
     erb(:listings)
+    # Displays all listings
   end
 
   get '/listings/new' do
     erb(:add_listing)
+    # Creates new listings
   end
 
   post '/listings/new/' do
-    @new_post = params[:listing]
-    $listings.push(@new_post)
+    Listing.create(address: params[:address], description: params[:description])
     redirect '/listings'
+    # Saves the listing and redirects to list page
   end
 
   run! if app_file == $0

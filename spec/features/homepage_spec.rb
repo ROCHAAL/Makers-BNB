@@ -2,7 +2,7 @@ feature "The homepage" do
   scenario "has a button that direct the user to a listings page" do
     visit('/')
     click_button("Listings")
-    expect(page).to have_content("house 1")
+    expect(page).to have_content("Current Listings")
   end
 
   scenario "has a button that directs the user to a create listings page" do

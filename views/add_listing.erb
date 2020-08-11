@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="./css/airbnbstyle.css">
 </head>
 <body>
 <h1>New Listing:</h1><br><br>
   <form action = '/listings/new/' method = 'post'>
-    <input type = 'text' name = 'listing'>
+<label for = 'address'>Address</label>
+    <input id = 'address' type = 'text' name = 'address'><br><br>
+<label for = 'description'>Description</label>
+    <input id = 'description' type = 'text' name = 'description'>
     <input type = 'submit' value = 'Submit'>
   </form>
 

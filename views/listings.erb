@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="./css/airbnbstyle.css">
 </head>
 <body>
 <h1>Current Listings</h1><br><br>
 <ul>
-<% $listings.each do |x| %>
-  <li> <%= x %> </li>
-  <% end %>
+    <%@list.each do |x|%>
+      <li>
+      <%= x.address + ", " + x.description %>
+      </li>
+    <%end%>
 </ul>
 </body>
 </html>
