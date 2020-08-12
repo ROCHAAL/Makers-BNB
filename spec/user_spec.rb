@@ -29,4 +29,14 @@ describe User do
       expect(result.username).to eq 'testuser'
     end
   end
+
+  describe '.authenticate' do
+    it 'will confirm that a user and password match' do
+      user = User.create(username: 'testuser', password: 'test123', email: 'test@testface.com')
+
+      check = User.authenticate(username: 'testuser', password: 'test123')
+
+      expect(check.id).to eq user.id
+    end
+  end
 end
