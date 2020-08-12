@@ -36,6 +36,10 @@ class AirBnb < Sinatra::Base
   end
 
   post '/' do
+    erb(:index_signed_in)
+  end
+
+  get '/sign_out' do
     erb(:index)
   end
 
