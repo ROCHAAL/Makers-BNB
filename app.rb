@@ -1,4 +1,5 @@
 require "sinatra/base"
+require 'sinatra/flash'
 require "./lib/listing"
 require "./lib/database_connection"
 require "./lib/user"
@@ -7,6 +8,7 @@ require "./database_setup"
 class AirBnb < Sinatra::Base
 
   enable :sessions
+  register Sinatra::Flash
 
   get '/' do
     @user = User.find(session[:user_id])
@@ -44,8 +46,14 @@ class AirBnb < Sinatra::Base
 
   post '/users' do
     user = User.create(username: params[:username], password: params[:password], email: params[:email])
-    session[:user_id] = user.id
-    redirect '/'
+
+    if user 
+      session[:user_id] = user.id
+      redirect '/'
+    else 
+      flash[:notice] = 'An account already exists with this email.'
+      redirect '/user/new'
+    end
   end
 
   get '/sessions/destroy' do
