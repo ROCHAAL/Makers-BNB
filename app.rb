@@ -38,7 +38,8 @@ class AirBnb < Sinatra::Base
   end
 
   post '/' do
-    erb(:index_signed_in)
+    User.create(username: params[:username], password: params[:password], email: params[:email])
+    redirect '/'
   end
 
   get '/sessions/destroy' do
