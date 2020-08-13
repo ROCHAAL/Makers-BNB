@@ -4,6 +4,7 @@
     <link href="<%= url('/css/style.css') %>" rel="stylesheet" type="text/css" />
 </head>
 <body>
+<div id='border'>
 <h1>Current Listings</h1><br><br>
 <ul>
     <%@list.each do |x|%>
@@ -12,5 +13,6 @@
       </li>
     <%end%>
 </ul>
+</div>
 </body>
 </html>
