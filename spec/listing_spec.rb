@@ -14,13 +14,15 @@ describe Listing do
 
   describe '.create' do
     it 'create and save new database listing' do
-      test_listing = Listing.create(address: 'alexs@numericable.fr', description: 'Great big house!')
+      User.create(username: "test", password: "testpassword", email: "test@test.com")
+      test_listing = Listing.create(address: 'alexs@numericable.fr', description: 'Great big house!', user_id: 1)
       expect(test_listing).to be_a Listing
       expect(test_listing.address).to eq('alexs@numericable.fr')
       expect(test_listing.description).to eq('Great big house!')
       expect(test_listing.id).to eq("1")
       expect(DatabaseConnection.query("SELECT address FROM listings WHERE id=1;").first['address']).to eq('alexs@numericable.fr')
     end
+  end
 =begin
     it "recognizes the user who created the listing" do
       allow(user).to receive(:id).and_return(1)
@@ -31,8 +33,9 @@ describe Listing do
 
   describe '.all' do
     it 'lists all listings from the database' do
-      Listing.create(address: 'alexs@numericable.fr', description: 'Great big house!')
-      Listing.create(address: 'test@test.com', description: 'this is a test!')
+      User.create(username: "test", password: "testpassword", email: "test@test.com")
+      Listing.create(address: 'alexs@numericable.fr', description: 'Great big house!', user_id: 1)
+      Listing.create(address: 'test@test.com', description: 'this is a test!', user_id: 1)
       expect(Listing.all.length).to eq 2
       expect(Listing.all).to be_a Array
       expect(Listing.all.first).to be_a Listing

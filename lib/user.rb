@@ -12,6 +12,7 @@ class User
 
   def self.create(username:, password:, email:)
     return if DatabaseConnection.query("SELECT * FROM users WHERE email = '#{email}';").any?
+    return if DatabaseConnection.query("SELECT * FROM users WHERE username = '#{username}';").any?
     
     encrypted_password = BCrypt::Password.create(password)
     result = DatabaseConnection.query("INSERT INTO users (username, password, email) 

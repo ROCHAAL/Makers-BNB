@@ -28,7 +28,7 @@ class AirBnb < Sinatra::Base
   end
 
   post '/listings/new/' do
-    Listing.create(address: params[:address], description: params[:description])
+    Listing.create(address: params[:address], description: params[:description], user_id: session[:user_id])
     redirect '/listings'
     # Saves the listing and redirects to list page
   end
@@ -37,7 +37,15 @@ class AirBnb < Sinatra::Base
     erb :'sessions/new'
   end
 
-  post '/sessions' do 
+  post '/sessions' do
+    user = User.authenticate(username: params[:username], password: params[:password])
+    if user
+      session[:user_id] = user.id
+      redirect '/'
+    else
+      flash[:notice] = 'Incorrect username or password, try again.'
+      redirect '/sessions/new'
+    end
   end
 
   get '/user/new' do
@@ -47,11 +55,11 @@ class AirBnb < Sinatra::Base
   post '/users' do
     user = User.create(username: params[:username], password: params[:password], email: params[:email])
 
-    if user 
+    if user
       session[:user_id] = user.id
       redirect '/'
-    else 
-      flash[:notice] = 'An account already exists with this email.'
+    else
+      flash[:notice] = 'An account already exists with this email or username.'
       redirect '/user/new'
     end
   end
