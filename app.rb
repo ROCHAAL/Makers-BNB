@@ -27,5 +27,21 @@ class AirBnb < Sinatra::Base
     # Saves the listing and redirects to list page
   end
 
+  get '/login' do
+    erb(:login)
+  end
+
+  get '/sign_up' do
+    erb(:sign_up)
+  end
+
+  post '/' do
+    erb(:index_signed_in)
+  end
+
+  get '/sign_out' do
+    erb(:index)
+  end
+
   run! if app_file == $0
 end
