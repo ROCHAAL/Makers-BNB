@@ -5,6 +5,8 @@ require "./database_setup"
 
 class AirBnb < Sinatra::Base
 
+  enable :sessions
+
   get '/' do
     erb(:index)
     # Homepage
@@ -17,7 +19,7 @@ class AirBnb < Sinatra::Base
   end
 
   get '/listings/new' do
-    erb(:add_listing)
+    erb :'listings/new'
     # Creates new listings
   end
 
@@ -27,19 +29,19 @@ class AirBnb < Sinatra::Base
     # Saves the listing and redirects to list page
   end
 
-  get '/login' do
-    erb(:login)
+  get '/sessions/new' do
+    erb :'sessions/new'
   end
 
-  get '/sign_up' do
-    erb(:sign_up)
+  get '/user/new' do
+    erb :'user/new'
   end
 
   post '/' do
     erb(:index_signed_in)
   end
 
-  get '/sign_out' do
+  get '/sessions/destroy' do
     erb(:index)
   end
 

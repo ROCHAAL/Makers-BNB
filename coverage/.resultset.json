@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/alexis/projects/makers/weeks/week_6/Makers-BNB/spec/database_connection_spec.rb": {
+      "/Users/student/Documents/Projects/MakersBnB/spec/database_connection_spec.rb": {
         "lines": [
           1,
           null,
@@ -25,7 +25,7 @@
           null
         ]
       },
-      "/home/alexis/projects/makers/weeks/week_6/Makers-BNB/spec/features/able_logging_spec.rb": {
+      "/Users/student/Documents/Projects/MakersBnB/spec/features/able_login_spec.rb": {
         "lines": [
           1,
           1,
@@ -43,7 +43,7 @@
           null
         ]
       },
-      "/home/alexis/projects/makers/weeks/week_6/Makers-BNB/spec/features/add_listing_spec.rb": {
+      "/Users/student/Documents/Projects/MakersBnB/spec/features/add_listing_spec.rb": {
         "lines": [
           1,
           1,
@@ -57,12 +57,12 @@
           null
         ]
       },
-      "/home/alexis/projects/makers/weeks/week_6/Makers-BNB/spec/features/homepage_spec.rb": {
+      "/Users/student/Documents/Projects/MakersBnB/spec/features/homepage_spec.rb": {
         "lines": [
           1,
           1,
           1,
-          null,
+          1,
           1,
           null,
           null,
@@ -74,25 +74,12 @@
           null
         ]
       },
-      "/home/alexis/projects/makers/weeks/week_6/Makers-BNB/spec/features/listings_page_spec.rb": {
+      "/Users/student/Documents/Projects/MakersBnB/spec/features/listings_page_spec.rb": {
         "lines": [
           1,
           1,
           1,
-          1,
           null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/alexis/projects/makers/weeks/week_6/Makers-BNB/spec/features/testing_infrastructure_spec.rb": {
-        "lines": [
-          1,
-          null,
-          null,
-          1,
           1,
           1,
           1,
@@ -100,7 +87,20 @@
           null
         ]
       },
-      "/home/alexis/projects/makers/weeks/week_6/Makers-BNB/spec/listing_spec.rb": {
+      "/Users/student/Documents/Projects/MakersBnB/spec/features/testing_infrastructure_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/student/Documents/Projects/MakersBnB/spec/listing_spec.rb": {
         "lines": [
           1,
           null,
@@ -141,7 +141,7 @@
           null
         ]
       },
-      "/home/silverlongjohns/Makers/challenges/afternoon/Makers-BNB/spec/user_spec.rb": {
+      "/Users/student/Documents/Projects/MakersBnB/spec/user_spec.rb": {
         "lines": [
           1,
           1,
@@ -203,7 +203,7 @@
           null
         ]
       },
-      "/home/silverlongjohns/Makers/challenges/afternoon/Makers-BNB/lib/user.rb": {
+      "/Users/student/Documents/Projects/MakersBnB/lib/user.rb": {
         "lines": [
           1,
           1,
@@ -243,7 +243,6 @@
           3,
           null,
           3,
-          2,
           2,
           null,
           1,
@@ -255,6 +254,6 @@
         ]
       }
     },
-    "timestamp": 1597243807
+    "timestamp": 1597314033
   }
 }
