@@ -30,4 +30,12 @@ attr_reader :address, :description, :id, :user_id
       Listing.new(id: listing['id'], address: listing['address'], description: listing['description'], user_id: listing['user_id'])
     end
   end
+
+  def username 
+    User.find(@user_id).username
+  end
+
+  def email
+    User.find(@user_id).email
+  end
 end
