@@ -12,6 +12,13 @@ describe User do
       expect(user.username).to eq 'testuser'
     end
 
+    it 'wont allow creation of a user with an email address already used' do
+      user = User.create(username: 'testuser', password: 'test123', email: 'test@testface.com')
+      user2 = User.create(username: 'duplicate', password: 'duplicate', email: 'test@testface.com')
+
+      expect(user2).to be_nil
+    end
+
     it 'encrypts a password with BCrypt' do
       expect(BCrypt::Password).to receive(:create).with('test123')
 

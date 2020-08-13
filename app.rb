@@ -35,6 +35,9 @@ class AirBnb < Sinatra::Base
     erb :'sessions/new'
   end
 
+  post '/sessions' do 
+  end
+
   get '/user/new' do
     erb :'user/new'
   end
