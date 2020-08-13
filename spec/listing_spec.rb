@@ -1,14 +1,15 @@
 require 'listing'
 
 describe Listing do
-  let(:listing) {Listing.new(id: 1, address: 'alexs@numericable.fr', description: 'Great big house!')}
-  
+  let(:listing) {Listing.new(id: 1, address: 'alexs@numericable.fr', description: 'Great big house!', user_id: 1)}
+  let(:user) {double(:user)}
+
   it 'has an address' do
     expect(listing.address).to eq('alexs@numericable.fr')
   end
 
   it 'has a description' do
-    expect(listing.description).to eq('Great big house!') 
+    expect(listing.description).to eq('Great big house!')
   end
 
   describe '.create' do
@@ -20,10 +21,16 @@ describe Listing do
       expect(test_listing.id).to eq("1")
       expect(DatabaseConnection.query("SELECT address FROM listings WHERE id=1;").first['address']).to eq('alexs@numericable.fr')
     end
+=begin
+    it "recognizes the user who created the listing" do
+      allow(user).to receive(:id).and_return(1)
+      expect(listing.user_id).to eq(user.id)
+    end
   end
+=end
 
-  describe '.all' do 
-    it 'lists all listings from the database' do 
+  describe '.all' do
+    it 'lists all listings from the database' do
       Listing.create(address: 'alexs@numericable.fr', description: 'Great big house!')
       Listing.create(address: 'test@test.com', description: 'this is a test!')
       expect(Listing.all.length).to eq 2
