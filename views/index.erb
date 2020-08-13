@@ -4,23 +4,27 @@
   <link href="<%= url('/css/style.css') %>" rel="stylesheet" type="text/css" />
 </head>
 <body>
+<div id='border'>
 <h1 id = 'head'>AirBnB Clone</h1>
 
+
 <form action = '/listings' method = 'get'>
-  <input type = 'submit' value = 'Listings'>
+  <input type="submit" name="submit" id="submit" value = 'Listings'>
 </form>
 
 <form action = '/listings/new' method = 'get'>
-  <input type = 'submit' value = 'Add Listing'>
+  <input type="submit" name="submit" id="submit" value = 'Add Listing'>
 </form>
 
 <form action='/login'>
-  <input type='submit' value='login'>
+  <input type="submit" name="submit" id="submit" value='Login'>
 </form>
 
 <form action='/sign_up'>
-  <input type="submit" value="sign up">
+  <input type="submit" name="submit" id="submit" value="Sign Up">
 </form>
+
+</div>
 
 <p>Testing infrastructure: ONLINE</p>
 </body>
