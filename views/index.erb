@@ -9,6 +9,9 @@
 
 <% if @user %>
 <h3> Hello <%=@user.username%>! </h3>
+<form action = '/sessions/destroy' method = 'post'>
+<input type = 'submit' value = 'Sign Out'>
+</form>
 <% end %>
 <form action = '/listings' method = 'get'>
   <input type="submit" name="submit" id="submit" value = 'Listings'>

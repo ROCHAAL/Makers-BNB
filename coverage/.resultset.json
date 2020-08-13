@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/student/Documents/Projects/MakersBnB/spec/database_connection_spec.rb": {
+      "/Users/patricia/makersbnb/Makers-BNB/spec/database_connection_spec.rb": {
         "lines": [
           1,
           null,
@@ -25,25 +25,7 @@
           null
         ]
       },
-      "/Users/student/Documents/Projects/MakersBnB/spec/features/able_login_spec.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/student/Documents/Projects/MakersBnB/spec/features/add_listing_spec.rb": {
+      "/Users/patricia/makersbnb/Makers-BNB/spec/features/add_listing_spec.rb": {
         "lines": [
           1,
           1,
@@ -57,7 +39,7 @@
           null
         ]
       },
-      "/Users/student/Documents/Projects/MakersBnB/spec/features/homepage_spec.rb": {
+      "/Users/patricia/makersbnb/Makers-BNB/spec/features/homepage_spec.rb": {
         "lines": [
           1,
           1,
@@ -74,7 +56,7 @@
           null
         ]
       },
-      "/Users/student/Documents/Projects/MakersBnB/spec/features/listings_page_spec.rb": {
+      "/Users/patricia/makersbnb/Makers-BNB/spec/features/listings_page_spec.rb": {
         "lines": [
           1,
           1,
@@ -87,7 +69,72 @@
           null
         ]
       },
-      "/Users/student/Documents/Projects/MakersBnB/spec/features/sign_up_spec.rb": {
+      "/Users/patricia/makersbnb/Makers-BNB/spec/features/login_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/patricia/makersbnb/Makers-BNB/spec/features/sign_out_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/patricia/makersbnb/Makers-BNB/spec/features/sign_up_spec.rb": {
         "lines": [
           1,
           1,
@@ -114,10 +161,21 @@
           1,
           1,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
           null
         ]
       },
-      "/Users/student/Documents/Projects/MakersBnB/spec/features/testing_infrastructure_spec.rb": {
+      "/Users/patricia/makersbnb/Makers-BNB/spec/features/testing_infrastructure_spec.rb": {
         "lines": [
           1,
           null,
@@ -130,7 +188,7 @@
           null
         ]
       },
-      "/Users/student/Documents/Projects/MakersBnB/spec/listing_spec.rb": {
+      "/Users/patricia/makersbnb/Makers-BNB/spec/listing_spec.rb": {
         "lines": [
           1,
           null,
@@ -171,7 +229,7 @@
           null
         ]
       },
-      "/Users/student/Documents/Projects/MakersBnB/spec/user_spec.rb": {
+      "/Users/patricia/makersbnb/Makers-BNB/spec/user_spec.rb": {
         "lines": [
           1,
           1,
@@ -241,6 +299,6 @@
         ]
       }
     },
-    "timestamp": 1597320314
+    "timestamp": 1597328434
   }
 }
