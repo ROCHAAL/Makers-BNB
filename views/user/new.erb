@@ -5,7 +5,7 @@
   </head>
   <div id='border'>
   <h1> Sign up page </h1>
-  <form action='/' method='post'>
+  <form action='/users' method='post'>
     <label for='username'>Username</label>
     <input type='text' id='username' name='username' placeholder='username here'>
     <label for='email'>Email</label>
@@ -14,10 +14,11 @@
     <input type='password' id='password' name='password' placeholder='password here'>
     <input type="submit" name="submit" id="submit"  value='Sign Up'>
    </form>
+   <%= flash[:notice] %>
 
   <p> Have an account? Log in !</p>
 
-  <form action='/sessions' method = 'post'>
+  <form action='/sessions/new'>
     <input type="submit" name="submit" id="submit"  value='login'>
   </form>
   </div>
