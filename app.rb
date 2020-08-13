@@ -1,6 +1,7 @@
 require "sinatra/base"
 require "./lib/listing"
 require "./lib/database_connection"
+require "./lib/user"
 require "./database_setup"
 
 class AirBnb < Sinatra::Base
@@ -8,6 +9,7 @@ class AirBnb < Sinatra::Base
   enable :sessions
 
   get '/' do
+    @user = User.find(session[:user_id])
     erb(:index)
     # Homepage
   end
@@ -37,13 +39,15 @@ class AirBnb < Sinatra::Base
     erb :'user/new'
   end
 
-  post '/' do
-    User.create(username: params[:username], password: params[:password], email: params[:email])
+  post '/users' do
+    user = User.create(username: params[:username], password: params[:password], email: params[:email])
+    session[:user_id] = user.id
     redirect '/'
   end
 
   get '/sessions/destroy' do
-    erb(:index)
+    session.clear
+    redirect '/'
   end
 
   run! if app_file == $0
