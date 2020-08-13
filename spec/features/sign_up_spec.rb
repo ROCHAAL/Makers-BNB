@@ -21,6 +21,17 @@ feature 'sign_up' do
     fill_in('password', with: 'test')
     fill_in('email', with: 'test@testface.com')
     click_button 'Sign Up'
-    expect(page).to have_content 'An account already exists with this email.'
+    expect(page).to have_content 'An account already exists with this email or username.'
+  end
+
+  scenario 'registering an account with an existing username causes an error' do 
+    User.create(username: 'testuser', password: 'test123', email: 'test@testface.com')
+    visit '/user/new'
+    fill_in('username', with: 'testuser')
+    fill_in('password', with: 'test123')
+    fill_in('email', with: 'different_email')
+    click_button 'Sign Up'
+    expect(page).to have_content 'An account already exists with this email or username.'
+    expect(current_path).to eq '/user/new'
   end
 end

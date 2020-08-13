@@ -38,6 +38,14 @@ class AirBnb < Sinatra::Base
   end
 
   post '/sessions' do 
+    user = User.authenticate(username: params[:username], password: params[:password])
+    if user
+      session[:user_id] = user.id
+      redirect '/'
+    else 
+      flash[:notice] = 'Incorrect username or password, try again.'
+      redirect '/sessions/new'
+    end
   end
 
   get '/user/new' do
@@ -51,7 +59,7 @@ class AirBnb < Sinatra::Base
       session[:user_id] = user.id
       redirect '/'
     else 
-      flash[:notice] = 'An account already exists with this email.'
+      flash[:notice] = 'An account already exists with this email or username.'
       redirect '/user/new'
     end
   end

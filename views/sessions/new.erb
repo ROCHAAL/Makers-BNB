@@ -10,8 +10,9 @@
     <input type='text' id='username' name='username' placeholder='username here'>
     <label for='password'>Password</label>
     <input type='password' id='password' name='password' placeholder='password here'>
-    <input type="submit" name="submit" id="submit"  value='login'>
+    <input type="submit" name="submit" id="submit"  value='Login'>
   </form>
+  <%= flash[:notice] %>
   
   <p> Do not have an account? Sign up! </p>
   
