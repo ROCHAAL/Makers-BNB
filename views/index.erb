@@ -4,9 +4,9 @@
   <link href="<%= url('/css/style.css') %>" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div id='border'>
-<h1 id = 'head'>AirBnB Clone</h1>
 
+<h1 id = 'head'>makersbnb</h1>
+<div id='border'>
 <% if @user %>
 <h3> Hello <%=@user.username%>! </h3>
 
@@ -22,7 +22,10 @@
 <input type='submit' name="submit" id="submit" value = 'Sign Out'>
 </form>
 <% else %> 
-<h2> Please Login or Sign Up </h2>
+
+<h1 style = 'color: black;'> Holiday spaces in the United Kingdom </h1>
+<h3> Self-isolate in style with makersbnb quarantine rental </h3><br><br>
+
 <form action='/sessions/new'>
   <input type="submit" name="submit" id="submit" value='Login'>
 </form>
@@ -34,5 +37,8 @@
 
 </div>
 <% end %>
+
+<div id='mylistings'>
+</div>
 </body>
 </html>
