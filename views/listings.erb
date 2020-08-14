@@ -9,7 +9,7 @@
 <ul>
     <%@list.each do |x|%>
       <li>
-      <%= x.address + ", " + x.description + ", " + x.username + "- " + x.email %>
+      <%= x.address + ", " + x.description + ", " + x.available_dates + ", £" + x.price_per_night + " per night, " + x.username + "- " + x.email %>
       </li>
     <%end%>
 </ul>
