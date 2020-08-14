@@ -40,11 +40,13 @@ attr_reader :address, :description, :id, :available_dates, :price_per_night, :bo
     end
   end
 
-  def self.my_listings(user_id)
-    result = DatabaseConnection.query("SELECT * FROM listings WHERE user_id = '#{user_id}';")
+  def self.my_pending_listings(user_id)
+    return nil unless user_id 
+
+    result = DatabaseConnection.query("SELECT * FROM listings WHERE user_id = '#{user_id}' AND booking_status = 'pending';")
     result.map do |listing|
       Listing.new(id: listing['id'], address: listing['address'], description: listing['description'], 
-        available_dates: listing['available_dates'], price_per_night: listing['price_per_night'], booking_status: listing['booking_status'], user_id: listing['user_id']
+      available_dates: listing['available_dates'], price_per_night: listing['price_per_night'], booking_status: listing['booking_status'], user_id: listing['user_id']
       )
     end
   end

@@ -73,13 +73,15 @@ describe Listing do
     end
   end
 
-  describe '.my_listings' do
+  describe '.my_pending_listings' do
     it 'lists only listings posted by a specific user' do 
       create_user_and_listing
       User.create(username: "test2", password: "testpassword", email: "test2@test.com")
       Listing.create(address: 'test2', description: 'test2', available_dates: "now", price_per_night: "1", user_id: 2)
-      expect(Listing.my_listings('1')).to be_a Array
-      expect(Listing.my_listings('1').length).to eq 1
+      listing = Listing.find('2')
+      listing.request_booking
+      expect(Listing.my_pending_listings('2')).to be_a Array
+      expect(Listing.my_pending_listings('2').length).to eq 1
     end
   end
 end

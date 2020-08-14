@@ -18,10 +18,11 @@ feature 'booking_system' do
 
   scenario 'booking a place changes booking status to pending' do 
     sign_up_and_log_in
-    listing = Listing.create(address: 'alexs@numericable.fr', description: 'Great big house!', available_dates: "now", price_per_night: "1", user_id: 1)
+    Listing.create(address: 'alexs@numericable.fr', description: 'Great big house!', available_dates: "now", price_per_night: "1", user_id: 1)
     click_button 'Listings'
     click_button 'Book Place'
     expect(current_path).to eq '/listings'
+    listing = Listing.find('1')
     expect(listing.booking_status).to eq 'pending'
   end
 end

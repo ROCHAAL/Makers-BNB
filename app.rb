@@ -12,6 +12,7 @@ class AirBnb < Sinatra::Base
 
   get '/' do
     @user = User.find(session[:user_id])
+    @list = Listing.my_pending_listings(session[:user_id])
     erb(:index)
     # Homepage
   end
@@ -41,6 +42,12 @@ class AirBnb < Sinatra::Base
     @listing = Listing.find(params[:id])
     @listing.request_booking
     redirect '/listings'
+  end
+
+  post '/bookings/approve/:id' do
+    @listing = Listing.find(params[:id])
+    @listing.approve_booking_request
+    redirect '/'
   end
 
   post '/sessions' do
