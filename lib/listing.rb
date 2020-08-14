@@ -49,6 +49,15 @@ attr_reader :address, :description, :id, :available_dates, :price_per_night, :bo
     end
   end
 
+  def self.find(id)
+    return nil unless id
+    result = DatabaseConnection.query("SELECT * FROM listings WHERE id='#{id}';")
+
+    Listing.new(id: result[0]['id'], address: result[0]['address'], description: result[0]['description'], available_dates: result[0]['available_dates'], 
+      price_per_night: result[0]['price_per_night'], booking_status: result[0]['booking_status'], user_id: result[0]['user_id']
+    )
+  end
+
   def request_booking
     DatabaseConnection.query("UPDATE listings SET booking_status = 'pending' WHERE id = '#{self.id}';")
     @booking_status = 'pending'

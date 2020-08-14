@@ -37,8 +37,8 @@ class AirBnb < Sinatra::Base
     erb :'sessions/new'
   end
 
-  post 'bookings/new' do
-    @listing = 
+  post '/bookings/new/:id' do
+    @listing = Listing.find(params[:id])
     @listing.request_booking
     redirect '/listings'
   end

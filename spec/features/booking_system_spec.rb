@@ -15,4 +15,13 @@ feature 'booking_system' do
     expect(page).to have_content 'alexs@numericable.fr'
     expect(page).to_not have_content 'alexs2@numericable.fr'
   end
+
+  scenario 'booking a place changes booking status to pending' do 
+    sign_up_and_log_in
+    listing = Listing.create(address: 'alexs@numericable.fr', description: 'Great big house!', available_dates: "now", price_per_night: "1", user_id: 1)
+    click_button 'Listings'
+    click_button 'Book Place'
+    expect(current_path).to eq '/listings'
+    expect(listing.booking_status).to eq 'pending'
+  end
 end

@@ -8,9 +8,9 @@
 <h1>Current Listings</h1><br><br>
 <ul>
     <%@list.each do |x|%>
-      <li>
+      <li class="listing" id="listing-<%= x.id %>">
       <%= x.address + ", " + x.description + ", " + x.available_dates + ", £" + x.price_per_night + " per night, " + x.username + "- " + x.email %>
-      <form action='/booking/new' method= 'post'>
+      <form action='/bookings/new/<%=x.id%>' method= 'post'>
       <input type='submit' name="submit" id="submit" value = 'Book Place'>
       </form>
       </li>
