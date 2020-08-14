@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/silverlongjohns/Makers/challenges/afternoon/Makers-BNB/spec/database_connection_spec.rb": {
+      "/Users/student/Documents/Projects/MakersBnB/spec/database_connection_spec.rb": {
         "lines": [
           1,
           null,
@@ -25,7 +25,7 @@
           null
         ]
       },
-      "/home/silverlongjohns/Makers/challenges/afternoon/Makers-BNB/spec/features/add_listing_spec.rb": {
+      "/Users/student/Documents/Projects/MakersBnB/spec/features/add_listing_spec.rb": {
         "lines": [
           1,
           1,
@@ -39,7 +39,39 @@
           null
         ]
       },
-      "/home/silverlongjohns/Makers/challenges/afternoon/Makers-BNB/spec/features/can_recognize_user_spec.rb": {
+      "/Users/student/Documents/Projects/MakersBnB/spec/features/booking_system_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/student/Documents/Projects/MakersBnB/spec/features/can_recognize_user_spec.rb": {
         "lines": [
           1,
           1,
@@ -56,7 +88,7 @@
           null
         ]
       },
-      "/home/silverlongjohns/Makers/challenges/afternoon/Makers-BNB/spec/features/homepage_spec.rb": {
+      "/Users/student/Documents/Projects/MakersBnB/spec/features/homepage_spec.rb": {
         "lines": [
           1,
           1,
@@ -73,7 +105,7 @@
           null
         ]
       },
-      "/home/silverlongjohns/Makers/challenges/afternoon/Makers-BNB/spec/features/listings_page_spec.rb": {
+      "/Users/student/Documents/Projects/MakersBnB/spec/features/listings_page_spec.rb": {
         "lines": [
           1,
           1,
@@ -85,7 +117,7 @@
           null
         ]
       },
-      "/home/silverlongjohns/Makers/challenges/afternoon/Makers-BNB/spec/features/login_spec.rb": {
+      "/Users/student/Documents/Projects/MakersBnB/spec/features/login_spec.rb": {
         "lines": [
           1,
           1,
@@ -107,57 +139,6 @@
           null,
           null,
           1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/home/silverlongjohns/Makers/challenges/afternoon/Makers-BNB/spec/features/sign_out_spec.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/home/silverlongjohns/Makers/challenges/afternoon/Makers-BNB/spec/features/sign_up_spec.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
           1,
           1,
           1,
@@ -181,12 +162,63 @@
           null
         ]
       },
-      "/home/silverlongjohns/Makers/challenges/afternoon/Makers-BNB/spec/listing_spec.rb": {
+      "/Users/student/Documents/Projects/MakersBnB/spec/features/sign_out_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/student/Documents/Projects/MakersBnB/spec/features/sign_up_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/student/Documents/Projects/MakersBnB/spec/listing_spec.rb": {
         "lines": [
           1,
           null,
           1,
-          3,
+          6,
           1,
           null,
           1,
@@ -211,6 +243,53 @@
           null,
           1,
           1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
           1,
           1,
           1,
@@ -225,7 +304,7 @@
           null
         ]
       },
-      "/home/silverlongjohns/Makers/challenges/afternoon/Makers-BNB/spec/user_spec.rb": {
+      "/Users/student/Documents/Projects/MakersBnB/spec/user_spec.rb": {
         "lines": [
           1,
           1,
@@ -295,6 +374,6 @@
         ]
       }
     },
-    "timestamp": 1597397491
+    "timestamp": 1597412760
   }
 }

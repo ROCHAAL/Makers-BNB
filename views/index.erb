@@ -38,7 +38,23 @@
 </div>
 <% end %>
 
+<% if (@user && @list)%>
 <div id='mylistings'>
+<h2> Your Listings: </h2>
+<ul>
+<span> You have a booking request for the following listings </span>
+    <%@list.each do |x|%>
+      <li class="booking" id="booking-<%= x.id %>">
+      <%= x.address + ", " + x.description + ", " + x.available_dates + ". " %>
+      <form action='/bookings/approve/<%=x.id%>' method= 'post'>
+      <input type='submit' name="submit" id="submit" value = 'Approve Booking'>
+      </form>
+      </li>
+    <%end%>
+</ul>
 </div>
+<% elsif @user %>
+<span> You have no pending bookings to approve. </span>
+<% end %>
 </body>
 </html>
