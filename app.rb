@@ -12,12 +12,13 @@ class AirBnb < Sinatra::Base
 
   get '/' do
     @user = User.find(session[:user_id])
+    @list = Listing.my_pending_listings(session[:user_id])
     erb(:index)
     # Homepage
   end
 
   get '/listings' do
-    @list = Listing.all
+    @list = Listing.available_listings
     erb(:listings)
     # Displays all listings
   end
@@ -35,6 +36,18 @@ class AirBnb < Sinatra::Base
 
   get '/sessions/new' do
     erb :'sessions/new'
+  end
+
+  post '/bookings/new/:id' do
+    @listing = Listing.find(params[:id])
+    @listing.request_booking
+    redirect '/listings'
+  end
+
+  post '/bookings/approve/:id' do
+    @listing = Listing.find(params[:id])
+    @listing.approve_booking_request
+    redirect '/'
   end
 
   post '/sessions' do
