@@ -1,6 +1,6 @@
 feature 'listings' do
   scenario "can be added by a user" do
-    visit('/')
+    sign_up_and_log_in
     click_button('Add Listing')
     page.fill_in 'address', with: 'house 4'
     page.fill_in 'description', with: 'old house'

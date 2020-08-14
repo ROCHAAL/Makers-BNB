@@ -64,8 +64,9 @@ class AirBnb < Sinatra::Base
     end
   end
 
-  get '/sessions/destroy' do
+  post '/sessions/destroy' do
     session.clear
+    flash[:notice] = 'You have signed out.'
     redirect '/'
   end
 
