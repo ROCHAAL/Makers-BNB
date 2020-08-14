@@ -130,7 +130,7 @@ body {
   height: 35%;
   width: 50%;
   border:1em solid #FFFFFF;
-  margin:auto;
+  margin: auto;
   transition: all 0.2s;
   background-color: white;
   box-shadow: 5px 5px 10px #272727;
@@ -164,4 +164,18 @@ h3{
   color: #646464;
 }
 
-
+#mylistings{
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: fixed;
+  left: 15%;  
+  bottom: 3%;
+  right: 45%;
+  height: 40%;
+  border:1em solid #FFFFFF;
+  transition: all 0.2s;
+  background-color: white;
+  box-shadow: 5px 5px 10px #272727;
+}
