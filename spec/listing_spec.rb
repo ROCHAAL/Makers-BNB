@@ -23,13 +23,6 @@ describe Listing do
       expect(DatabaseConnection.query("SELECT address FROM listings WHERE id=1;").first['address']).to eq('alexs@numericable.fr')
     end
   end
-=begin
-    it "recognizes the user who created the listing" do
-      allow(user).to receive(:id).and_return(1)
-      expect(listing.user_id).to eq(user.id)
-    end
-  end
-=end
 
   describe '.all' do
     it 'lists all listings from the database' do
