@@ -12,14 +12,9 @@ feature 'user login/sign up' do
   end
 
   scenario 'a user logs in with an existing account' do 
-    User.create(username: 'test_username', password: 'test_password', email: 'test@test.com')
-    visit '/'
-    click_button 'Login'
-    fill_in('username', with: 'test_username')
-    fill_in('password', with: 'test_password')
-    click_button 'Login'
+    sign_up_and_log_in
     expect(current_path).to eq '/'
-    expect(page).to have_content 'Hello test_username!'
+    expect(page).to have_content 'Hello testuser!'
   end
 
   scenario 'a user puts in an incorrect username' do

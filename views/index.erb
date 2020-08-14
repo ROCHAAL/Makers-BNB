@@ -9,10 +9,7 @@
 
 <% if @user %>
 <h3> Hello <%=@user.username%>! </h3>
-<form action = '/sessions/destroy' method = 'post'>
-<input type = 'submit' value = 'Sign Out'>
-</form>
-<% end %>
+
 <form action = '/listings' method = 'get'>
   <input type="submit" name="submit" id="submit" value = 'Listings'>
 </form>
@@ -21,6 +18,11 @@
   <input type="submit" name="submit" id="submit" value = 'Add Listing'>
 </form>
 
+<form action = '/sessions/destroy' method = 'post'>
+<input type='submit' name="submit" id="submit" value = 'Sign Out'>
+</form>
+<% else %> 
+<h2> Please Login or Sign Up </h2>
 <form action='/sessions/new'>
   <input type="submit" name="submit" id="submit" value='Login'>
 </form>
@@ -28,9 +30,9 @@
 <form action='/user/new'>
   <input type="submit" name="submit" id="submit" value="Sign Up">
 </form>
+<%= flash[:notice] %>
 
 </div>
-
-<p>Testing infrastructure: ONLINE</p>
+<% end %>
 </body>
 </html>

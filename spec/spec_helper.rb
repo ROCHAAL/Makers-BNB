@@ -7,6 +7,7 @@ require_relative 'setup_test_database'
 require './database_setup'
 require 'simplecov'
 require 'simplecov-console'
+require 'web_helpers'
 require './app.rb'
 
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
