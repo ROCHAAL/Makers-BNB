@@ -17,7 +17,7 @@ class AirBnb < Sinatra::Base
   end
 
   get '/listings' do
-    @list = Listing.all
+    @list = Listing.available_listings
     erb(:listings)
     # Displays all listings
   end
@@ -35,6 +35,12 @@ class AirBnb < Sinatra::Base
 
   get '/sessions/new' do
     erb :'sessions/new'
+  end
+
+  post 'bookings/new' do
+    @listing = 
+    @listing.request_booking
+    redirect '/listings'
   end
 
   post '/sessions' do

@@ -10,6 +10,9 @@
     <%@list.each do |x|%>
       <li>
       <%= x.address + ", " + x.description + ", " + x.available_dates + ", £" + x.price_per_night + " per night, " + x.username + "- " + x.email %>
+      <form action='/booking/new' method= 'post'>
+      <input type='submit' name="submit" id="submit" value = 'Book Place'>
+      </form>
       </li>
     <%end%>
 </ul>
