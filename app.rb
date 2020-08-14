@@ -28,7 +28,7 @@ class AirBnb < Sinatra::Base
   end
 
   post '/listings/new/' do
-    Listing.create(address: params[:address], description: params[:description], user_id: session[:user_id])
+    Listing.create(address: params[:address], description: params[:description], available_dates: params[:available_dates], price_per_night: params[:price_per_night], user_id: session[:user_id])
     redirect '/listings'
     # Saves the listing and redirects to list page
   end
